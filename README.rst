@@ -40,6 +40,13 @@ Requirements
 No external dependencies. This will run in both MicroPython and CPython.
 
 
+Installation
+------------
+
+Copy the files as needed to your MicroPython device, altering the path
+if necessary (e.g., you may wish to keep them in a `lib` directory).
+
+
 Files
 -----
 
