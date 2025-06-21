@@ -40,10 +40,15 @@ def load(fpath):
         raise FileNotFoundError("file not found: {}".format(fpath))
 
 # ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-def dump(obj, indent=4):
+def dump(obj, file_path=None, indent=4):
     import pprint
-    # delegate the call to pprint.pretty_print
-    pprint.pretty_print(obj, indent=indent)
+    if file_path is None:
+        # delegate the call to pprint.pretty_print
+        pprint.pretty_print(obj, indent=indent)
+    else:
+        text = pprint.pretty_print(obj, indent=indent, return_text=True)
+        with open(file_path, "w") as f:
+            f.write(text)
 
 # ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 def parse(text):

@@ -33,4 +33,8 @@ print('\ndog food: {}'.format(dog_food))
 print('\ndump with indent of 4:\n')
 yaml.dump(config)
 
+_file_path = 'output.yaml'
+print("\ndump to file '{}' with indent of 2:\n".format(_file_path))
+yaml.dump(config, file_path=_file_path, indent=2)
+
 print('complete.')
