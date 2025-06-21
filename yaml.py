@@ -24,10 +24,20 @@
 # syntax are not supported.
 #
 
+class FileNotFoundError(Exception):
+    '''     
+    An exception thrown when encountering a reference to a file that does not exist.
+    '''     
+    pass
+
 # ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-def load(f):
-    text = f.read()
-    return parse(text)
+def load(fpath):
+    try:
+        with open(fpath, 'r') as f:
+            text = f.read()
+            return parse(text)
+    except OSError as e:
+        raise FileNotFoundError("file not found: {}".format(fpath))
 
 # ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 def dump(obj, indent=4):

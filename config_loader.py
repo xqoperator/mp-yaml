@@ -28,7 +28,6 @@ class ConfigLoader:
     @staticmethod
     def configure(filename=None):
         path = filename or ConfigLoader.DEFAULT_FILE
-        with open(path, 'r') as f:
-            return yaml.load(f)
+        return yaml.load(path)
 
 #EOF
