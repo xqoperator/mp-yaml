@@ -24,7 +24,9 @@ syntax are not supported.
 Sample Usage
 ------------
 
-Here's a sample usage using the ConfigLoader::
+Here's a sample usage using the ConfigLoader:
+
+.. code-block:: python
 
     from config_loader import ConfigLoader
 
