@@ -21,6 +21,17 @@ strings, anchors, complex keys, inline dictionaries and complex YAML
 syntax are not supported.
 
 
+Sample Usage
+------------
+
+Here's a sample usage using the ConfigLoader::
+
+    from config_loader import ConfigLoader
+
+    config = ConfigLoader.configure()
+    value = config["kros"]["motor"]["pid_controller"]["kp"]
+
+
 Requirements
 ------------
 
