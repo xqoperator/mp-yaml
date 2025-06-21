@@ -1,0 +1,30 @@
+# sample YAML configuration file
+kros:
+    component:
+        # comment .......................................
+        enable_motor_controller:             True          # enable motor controller
+        supported_modes:
+            - auto
+            - manual
+            - diagnostic
+    motor:
+        pid_controller:
+            kp:                               0.23000      # proportional gain (Ku * 0.6)
+            ki:                               0.03000      # integral gain     (Ku * 0.1)
+            kd:                               0.01000      # derivative gain   (Ku * 0.05)
+        slew_limiter:
+            minimum_output:                  -1.0          # lower limit of permitted speed output values
+            maximum_output:                   1.0          # upper limit, both should match motor_controller:scale_factor
+            hysteresis:                       2.0          # how close do we get to the target speed?
+            calibrate:                      False          # if True, calibrate upon starting
+            verbose:                         True            # noisy sensor output
+    hardware:
+        micro_controller:                                  # control over multiple microcontrollers
+            i2c_address:                   0x43            # I2C address of controller 0
+            bus_number:                       1            # I2C bus number
+            pin:                             18            # default GPIO used
+            name_0:                       'itsy'
+            name_1:                      'motor'
+            name_2:                      'tinyfx'
+
+#EOF
