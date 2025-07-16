@@ -17,6 +17,10 @@
             "github:xqoperator/mp-yaml/pprint.py"
         ],
         [
+            "yaml/version.py",
+            "github:xqoperator/mp-yaml/version.py"
+        ],
+        [
             "yaml/config_loader.py",
             "github:xqoperator/mp-yaml/config_loader.py"
         ]
