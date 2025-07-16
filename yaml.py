@@ -41,7 +41,7 @@ def load(fpath):
 
 # ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 def dump(obj, file_path=None, indent=4):
-    import pprint
+    from . import pprint
     if file_path is None:
         # delegate the call to pprint.pretty_print
         pprint.pretty_print(obj, indent=indent)
