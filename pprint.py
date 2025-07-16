@@ -13,7 +13,7 @@
 # This also prints a subset of JSON, meant only to be used with mp-yaml.
 #
 
-from stringbuilder import StringBuilder
+from .stringbuilder import StringBuilder
 
 # ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 def _pretty_print_yaml(obj, indent=4, _current_indent=0, return_text=False):
