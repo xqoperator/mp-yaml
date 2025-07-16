@@ -1,23 +1,23 @@
 {
     "urls": [
         [
-            "umodbus/__init__.py",
+            "yaml/__init__.py",
             "github:xqoperator/mp-yaml/__init__.py"
         ],
         [
-            "umodbus/yaml.py",
+            "yaml/yaml.py",
             "github:xqoperator/mp-yaml/yaml.py"
         ],
         [
-            "umodbus/stringbuilder.py",
+            "yaml/stringbuilder.py",
             "github:xqoperator/mp-yaml/stringbuilder.py"
         ],
         [
-            "umodbus/pprint.py",
+            "yaml/pprint.py",
             "github:xqoperator/mp-yaml/pprint.py"
         ],
         [
-            "umodbus/config_loader.py",
+            "yaml/config_loader.py",
             "github:xqoperator/mp-yaml/config_loader.py"
         ]
     ],
