@@ -1,0 +1,26 @@
+{
+    "urls": [
+        [
+            "umodbus/__init__.py",
+            "github:xqoperator/mp-yaml/__init__.py"
+        ],
+        [
+            "umodbus/yaml.py",
+            "github:xqoperator/mp-yaml/yaml.py"
+        ],
+        [
+            "umodbus/stringbuilder.py",
+            "github:xqoperator/mp-yaml/stringbuilder.py"
+        ],
+        [
+            "umodbus/pprint.py",
+            "github:xqoperator/mp-yaml/pprint.py"
+        ],
+        [
+            "umodbus/config_loader.py",
+            "github:xqoperator/mp-yaml/config_loader.py"
+        ]
+    ],
+    "deps": [],
+    "version": "0.0.1"
+}
