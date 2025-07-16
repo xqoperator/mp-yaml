@@ -19,7 +19,7 @@
 #     config = ConfigLoader.configure('my_file.yaml')
 #
 
-import yaml
+from . import yaml
 
 class ConfigLoader:
 
